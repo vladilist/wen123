@@ -1,0 +1,69 @@
+
+body{
+    background-image: url("paisaje.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* opcional: fija la imagen de fondo al desplazarse */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.imagen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5%;
+    width: 95%;
+    border-radius: 50px;
+    color: #ff0000;
+    cursor: pointer;
+    flex: 0.2;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+  }
+  
+  .imagen h3 {
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 10px;
+    opacity: 0;
+  }
+  
+  .imagen.vista {
+    flex: 3;
+    background-size: contain;
+  }
+  
+  .imagen.vista h3 {
+    opacity: 1;
+    align-items: flex-start;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  @media (max-width: 480px) {
+    .contenedor {
+        height: 100%;
+        width: 100%;
+    }
+    .imagen:nth-of-type(5) {
+        /* Estilos para la quinta imagen */
+    }
+}
+ 
